@@ -96,11 +96,30 @@ img {
   font-weight: 700;
 }
 
-.logo-vouch {
-  color: #ee1350;
-}
+.logo-vouch,
 .logo-healthcare {
-  color: #6a1fd0;
+  background: linear-gradient(120deg, #ee1350, #ff2f6b, #a21caf, #6a1fd0, #ee1350);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: logoGradientShift 6s ease-in-out infinite;
+}
+
+@keyframes logoGradientShift {
+  0% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: brightness(1.4);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
 }
 
 .logo-circle {
